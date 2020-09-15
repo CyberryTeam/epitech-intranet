@@ -10,9 +10,8 @@ jobs:
           - 12
           - 14
 
-    runs-on: ubuntu-latest
-
     name: Build with Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
@@ -46,6 +45,7 @@ jobs:
           yarn build
 
   lint:
+    name: Lint
     runs-on: ubuntu-latest
 
     steps:
