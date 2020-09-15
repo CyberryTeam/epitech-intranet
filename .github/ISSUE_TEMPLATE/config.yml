@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Contributing
+    url: https://github.com/CyberryTeam/contributing/blob/master/SUBMISSION_GUIDELINES.md#issue
+    about: Before submitting your issue, make sure you have read the Issue Submission Guideline.
+  - name: Pull Request Submission Guideline
+  url: https://github.com/CyberryTeam/contributing/blob/master/SUBMISSION_GUIDELINES.md#pull-request
+    about: Before submitting your pull request, make sure you have read the Pull Request Submission Guideline.
