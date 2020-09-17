@@ -1,0 +1,65 @@
+name: Pull Request
+
+on: [ pull_request ]
+
+jobs:
+
+  node:
+    strategy:
+      matrix:
+        node:
+          - 12
+          - 14
+
+    name: Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Get yarn cache directory
+        id: yarn-cache-directory
+        run: |
+          echo "::set-output name=path::$(yarn cache dir)"
+
+      - name: Cache
+        uses: actions/cache@v2
+        with:
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn
+          path: |
+            ${{ steps.yarn-cache-directory.outputs.path }}
+            **/node_modules
+
+      - name: Install dependencies
+        run: |
+          yarn install
+
+      - name: Build
+        run: |
+          yarn build
+
+      - name: Lint
+        run: |
+          yarn lint
+
+  super-linter:
+    name: Super-Linter
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Lint
+        uses: github/super-linter@v3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FILTER_REGEX_EXCLUDE: .*.github/.*
+          VALIDATE_ALL_CODEBASE: false
+          VALIDATE_MD: true

@@ -1,6 +1,6 @@
-# template
+# epitech-intranet
 
-Short description of the project
+Epitech Intranet API wrapper for Node
 
 ## Table of Contents
 
@@ -9,80 +9,38 @@ Short description of the project
 - [Getting started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Testing](#testing)
 - [Using](#using)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## About
 
-Description of the project
+This package allows to interact with the API of the Epitech Intranet.
 
 ### Built with
 
-- [Library](https://domain.tdl)
-- [Framework](https://domain.tdl)
+- [TypeScript](https://www.typescriptlang.org)
 
 ## Getting started
 
 ### Prerequisites
 
-1. Install `library`:
-
-- apt (Debian based distributions):
-
-```shell script
-sudo apt install library
-```
-
-- dnf (Fedora based distributions):
-
-```shell script
-sudo dnf install library
-```
-
-- pacman (Arch based distributions):
-
-```shell script
-sudo pacman -S library
-```
+1. [Install Node.js](https://nodejs.org/en/download/package-manager/)
 
 ### Installation
 
-1. Clone the repository:
-
-```shell script
-git clone https://github.com/username/repository.git
-```
-
-## Testing
-
-Run the tests:
-
-```shell script
-test run .
-```
-
-Run coding style tests:
-
-```shell script
-lint run .
-```
+> Not available yet.
 
 ## Using
 
-See available commands:
-
-```shell script
-./project --help
-```
+> Not available yet.
 
 ## Contributing
 
 Bug reports, feature requests, other issues and pull requests are welcome.
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for more information.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for more information.
 
 ## License
 
-Distributed under the [Unknown](https://choosealicense.com/) License.
-See [`LICENSE`](LICENSE) for more information.
+Distributed under the [MIT](https://spdx.org/licenses/MIT.html) License.
+See [LICENSE](LICENSE) for more information.
