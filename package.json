@@ -1,0 +1,24 @@
+{
+  "name": "epitech-intranet",
+  "version": "1.0.0",
+  "description": "Epitech Intranet Node API wrapper",
+  "main": "src/index.ts",
+  "repository": "git@github.com:CyberryTeam/epitech-intranet.git",
+  "author": "Cyberry Team <team@cyberry.fr>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --build",
+    "start": "node dist/index.js",
+    "format": "prettier --write src/**/*.ts",
+    "lint": "eslint src/**/*.ts"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.1.1",
+    "@typescript-eslint/parser": "^4.1.1",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.1",
+    "typescript": "^4.0.2"
+  }
+}
